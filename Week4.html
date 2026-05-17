@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image-removebg-preview.png" type="png">
+    <title>Study Schedule</title>
+</head>
+
+<body>
+<div class="Main-table">
+    <h1>Week 4 From 06/06 To 12/06</h1>
+
+    <table width="100%" class="table">
+
+        <thead class="Sunbjects">
+            <tr>
+                <th>Day</th>
+                <th>Calculus</th>
+                <th>Deutsch</th>
+                <th>Chemistry</th>
+                <th>Physics</th>
+                <th>Project</th>
+                <th>Web Development</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <th class="Sunbjects" >Sunday</th>
+                <td><input type="checkbox"> 1 PM to 3 PM</td>
+                <td><input type="checkbox"> 5 PM to 9 PM</td>
+                <td>------</td>
+                <td>------</td>
+                <td><input type="checkbox"> 10 PM to 12 AM</td>
+                <td><input type="checkbox"> 1 AM to 4 AM</td>
+            </tr>
+
+            <tr>
+                <th class="Sunbjects" >Monday</th>
+                <td><input type="checkbox"> 1 PM to 3 PM</td>
+                <td><input type="checkbox"> 5 PM to 9 PM</td>
+                <td>------</td>
+                <td>------</td>
+                <td><input type="checkbox"> 10 PM to 12 AM</td>
+                <td><input type="checkbox"> 1 AM to 4 AM</td>
+            </tr>
+
+            <tr>
+                <th class="Sunbjects" >Tuesday</th>
+                <td><input type="checkbox"> 1 PM to 3 PM</td>
+                <td><input type="checkbox"> 5 PM to 9 PM</td>
+                <td>------</td>
+                <td>------</td>
+                <td><input type="checkbox"> 10 PM to 12 AM</td>
+                <td><input type="checkbox"> 1 AM to 4 AM</td>
+            </tr>
+
+            <tr>
+                <th class="Sunbjects" >Wednesday</th>
+                <td><input type="checkbox"> 1 PM to 3 PM</td>
+                <td><input type="checkbox"> 5 PM to 9 PM</td>
+                <td>------</td>
+                <td>------</td>
+                <td><input type="checkbox"> 10 PM to 12 AM</td>
+                <td><input type="checkbox"> 1 AM to 4 AM</td>
+            </tr>
+
+            <tr>
+                <th class="Sunbjects" >Thursday</th>
+                <td><input type="checkbox"> 1 PM to 3 PM</td>
+                <td><input type="checkbox"> 5 PM to 9 PM</td>
+                <td>------</td>
+                <td>------</td>
+                <td><input type="checkbox"> 10 PM to 12 AM</td>
+                <td><input type="checkbox"> 1 AM to 4 AM</td>
+            </tr>
+
+            <tr>
+                <th class="Sunbjects" >Friday</th>
+                <td>------</td>
+                <td><input type="checkbox"> 5 PM to 9 PM</td>
+                <td><input type="checkbox"> All the day</td>
+                <td>------</td>
+                <td>------</td>
+                <td><input type="checkbox"> 1 AM to 4 AM</td>
+            </tr>
+
+            <tr>
+                <th class="Sunbjects">Saturday</th>
+                <td>------</td>
+                <td><input type="checkbox"> 5 PM to 9 PM</td>
+                <td>------</td>
+                <td><input type="checkbox"> All the day</td>
+                <td>------</td>
+                <td><input type="checkbox"> 1 AM to 4 AM</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <a href="Week5.html">
+        <button class="button">Next Week</button>
+    </a>
+        <a href="Week3.html">
+        <button class="button">Past Week</button>
+    </a>
+    <a href="https://wa.me/201063427661" target="_blank">
+    <button class="button">WhatsApp Me</button>
+    </a>
+</div>
+<script>
+
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+/* Load saved state */
+checkboxes.forEach((checkbox, index) => {
+
+    const saved = localStorage.getItem("checkbox" + index);
+
+    if (saved === "true") {
+        checkbox.checked = true;
+    }
+
+    /* Save state when changed */
+    checkbox.addEventListener("change", () => {
+        localStorage.setItem("checkbox" + index, checkbox.checked);
+    });
+
+});
+
+</script>
+</body>
+
+</html>
